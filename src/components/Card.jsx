@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-//import './Card.scss'
+import '../sass/Card.scss'
 
 const Card = ({ producto }) => {
   

@@ -1,0 +1,221 @@
+/* ------------------------------------- */
+/* HEADER                                */
+/* ------------------------------------- */
+body{
+    background-color: #f3e6d4;
+    background-image: url(../../public/img/noise.png);
+    margin-left: 50px;
+  }
+  
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: column-reverse wrap-reverse;
+    @media (max-width: 768px) {
+      & {
+        flex-direction: column-reverse;
+      }
+    }
+  
+  
+  }
+  
+  #menu {
+    display: none;
+  
+    &:checked + .nav-bar {
+      display: block;
+    }
+  
+    &:checked ~ .search-bar .menu-toogle__label {
+      background-color: yellow;
+    }
+  
+  }
+  
+  /* ------------------------------------- */
+  /* NAVBAR                                */
+  /* ------------------------------------- */
+  
+  .nav-bar {
+  
+    order: 2;
+    border-bottom: 2px solid #333;
+    &__nav-list {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+  
+      @media (max-width: 768px) {
+        & {
+          flex-direction: column;
+        }
+      }
+    }
+  
+    &__nav-item {
+      text-align: center;
+    }
+  
+    &__nav-link {
+      display: block;
+      color: #2B1023;
+      padding: 1em 2em;
+      text-decoration: none;
+    }
+  
+    &__nav-link:hover{
+      color: #F68C24;
+    }
+  
+    @media (max-width: 768px) {
+      & {
+        display: none;
+      }
+    }
+  }
+  
+  /* ------------------------------------- */
+  /* SEARCH BAR                            */
+  /* ------------------------------------- */
+  
+  .search-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    &__logo-container,
+    &__form-container,
+    &__carrito-container {
+      padding: 1em;
+      padding-bottom: 12px;
+    }
+  
+    &__logo-container {
+      order: -1;
+      height: 137px;
+    }
+  
+    &__logo-container {
+      background-image: url(../../public/img/logoPNG.png);
+      color: rgba(0, 0,0, 0);
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  
+    &__form-container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      order: 1;
+      background-color: #333;
+      width: 90%;
+    }
+  
+    @media (max-width: 768px){
+      &__form-container {
+        width: 80%;
+      }
+    }
+  
+    @media (max-width: 479px){
+      &__form-container {
+        width: 70%;
+      }
+    }
+  
+    &__form-search,
+    &__form-submit {
+      border-radius: 12px;
+      margin-left: 0.5em;
+    }
+    &__form-search {
+      background-color: #FFF5DB;
+      width: 100%;
+    }
+  
+    &__form-submit {
+      align-self: center;
+      background-color: #f75d33;
+      color: #333;
+      width: 112px;
+      height: 30px;
+    }
+  
+    &__carrito-container {
+      display: flex;
+      flex: 0 0 3em; /* shorthand (grow shrink basis */
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+      width: 10%;
+      height: auto;
+      order: 2;
+      color: transparent;
+      flex-basis: auto;
+    }
+  
+    &__carrito-container::before{
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+  
+      font: var(--fa-font-solid);
+      content: "\f07a";
+      color: white;
+    }
+  
+    &__carrito-container:hover{
+      cursor: pointer;
+    }
+  }
+  
+  /* ------------------------------------- */
+  /* MENU TOOGLE                           */
+  /* ------------------------------------- */
+  
+  .menu-toggle {
+    display: none;
+    background-color: red;
+    flex: 0 0 3em;
+    position: relative;
+    cursor: pointer;
+  
+    &__label {
+      display: block;
+      background-color: black;
+      height: 100%;
+    }
+  
+    &__top-bread,
+    &__meat,
+    &__bottom-bread {
+      display: block;
+      background-color: #333;
+      height: .2em;
+      position: absolute;
+      left: .5em;
+      right: .5em;
+    }
+  
+    &__top-bread {
+      top: .8em;
+    }
+  
+    &__meat {
+      top: 50%;
+      margin-top: -.1em;
+    }
+  
+    &__bottom-bread {
+      bottom: .8em;
+    }
+  
+    @media (max-width: 768px) {
+      & {
+        display: block;
+      }
+    }
+  }
