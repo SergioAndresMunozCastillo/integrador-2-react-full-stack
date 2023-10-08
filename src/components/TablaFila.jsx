@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-//import './TablaFila.scss'
+import '../sass/TablaFila.scss'
 import ProductoContext from '../contexts/ProductoContext'
 
 const TablaFila = ( { producto, setProductoAEditar } ) => {

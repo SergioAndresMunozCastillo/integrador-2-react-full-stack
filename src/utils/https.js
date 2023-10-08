@@ -34,8 +34,14 @@ export const update = async (url, data, id) => {
         }
 
         const fullUrl = url + id
+        console.log(fullUrl)
         const res = await fetch(fullUrl, config);
-        const datoActualizado = res.json();
+        console.log("Resultado update")
+        console.log(res.json())
+        if( !res.ok){
+            throw new Error(`Algo ocurrió, ${respuesta.status} ${respuesta.statusText}`)
+        }
+        const datoActualizado = await res.json();
 
         return datoActualizado
     } catch (error) {
@@ -43,15 +49,15 @@ export const update = async (url, data, id) => {
     }
 }
 
-export const del = async (url, data, id) => {
+export const del = async (url, id) => {
     try {
         const config = {
-            method: 'DELETE',
-            headers: {'Content-Type' : 'application/json'},
-            body: JSON.stringify(data)
+            method: 'DELETE'
         }
 
         const fullUrl = url + id
+        console.log("Peaceful deletion")
+        console.log(fullUrl)
         const res = await fetch(fullUrl, config)
     } catch (error) {
         console.log(error)

@@ -1,12 +1,13 @@
 import { useContext } from 'react'
 import '../sass/Card.scss'
 
-const Card = ({ producto }) => {
+const Card = ({ producto, agregarCarritoContext }) => {
   
   // console.log(producto)
 
   const handleClick = (e) => {
     //console.log(producto)
+    agregarCarritoContext(producto)
     e.preventDefault()
     
   }

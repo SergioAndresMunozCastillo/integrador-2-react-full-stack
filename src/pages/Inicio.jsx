@@ -1,9 +1,11 @@
-import { useContext } from 'react'
+import CarritoContext from '../contexts/CarritoContext'
 import ProductoContext from '../contexts/ProductoContext'
 import Card from '../components/Card'
+import { useContext } from 'react'
 
 const Inicio = () => {
     const {productos} = useContext(ProductoContext)
+    const { carrito, agregarCarritoContext } = useContext(CarritoContext)
 
   return (
     <main>
@@ -14,7 +16,7 @@ const Inicio = () => {
             <div className='cards-container'>
             {
               productos && productos.map( (producto, idx) => (
-                <Card key={idx} producto={producto} />
+                <Card key={idx} producto={producto} agregarCarritoContext={agregarCarritoContext}/>
               ))
             }
             </div>
