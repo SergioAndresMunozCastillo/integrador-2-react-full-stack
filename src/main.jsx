@@ -13,26 +13,18 @@ import Contacto from "./pages/Contacto";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Rooter from "./Rooter";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <CarritoProvider>
-      <ProductoProvider>
-        <DarkModeProvider>
-          <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Inicio/>}></Route>
-            <Route path="/alta" element={<Alta/>}></Route>
-            <Route path="/nosotros" element={<Nosotros/>}></Route>
-            <Route path="/contacto" element={<Contacto/>}></Route>
-            <Route path="/carrito" element={<Carrito/>}></Route>
-          </Routes>
-          <Footer/>
-          </BrowserRouter>
-        </DarkModeProvider>
-      </ProductoProvider>
-    </CarritoProvider>
-
+    <React.StrictMode>
+      <CarritoProvider>
+        <ProductoProvider>
+          <DarkModeProvider>
+            <Rooter>
+              
+            </Rooter>
+          </DarkModeProvider>
+        </ProductoProvider>
+      </CarritoProvider>
   </React.StrictMode>,
 )

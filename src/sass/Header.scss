@@ -41,6 +41,14 @@ body{
   
     order: 2;
     border-bottom: 2px solid #333;
+    &__light-mode{
+      border-bottom: 2px solid #333;
+    }
+  
+    &__dark-mode{
+      border-bottom: 2px solid #f3e6d4;
+    }
+
     &__nav-list {
       display: flex;
       list-style-type: none;
@@ -59,7 +67,14 @@ body{
   
     &__nav-link {
       display: block;
-      color: #2B1023;
+      
+      &__light-mode{
+        color: #2B1023;
+      }
+    
+      &__dark-mode{
+        color: #f3e6d4;
+      }
       padding: 1em 2em;
       text-decoration: none;
     }

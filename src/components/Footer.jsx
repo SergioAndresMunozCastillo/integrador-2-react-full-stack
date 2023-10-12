@@ -1,11 +1,13 @@
-import React from 'react'
 import '../sass/Footer.scss'
+import React, { useContext } from 'react'
+import DarkModeContext from '../contexts/DarkModeContext'
 
 const Footer = () => {
+  const {mode} = useContext(DarkModeContext)
   return (
     <>
-        <footer class="main-footer">
-          <div class="ribbon">
+        <footer class={`main-footer main-footer__${mode}-mode`}>
+          <div class={`ribbon ribbon__${mode}-mode`}>
           </div>
           <div class="subs">
             <h2 class="subs__title">No te pierdas lo que está por venir. Suscribete para recibir notificaciones de nuevos productos.</h2>

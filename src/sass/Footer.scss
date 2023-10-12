@@ -1,11 +1,26 @@
 .main-footer{
     display: flex;
     flex-direction: column;
+    
+    &__light-mode{
+        color: #2B1023;
+      }
+    
+      &__dark-mode{
+        color: #f3e6d4;
+      }
 }
 
 .ribbon{
-    background-color: #333;
     height: 3.5em;
+
+    &__light-mode{
+        background-color: #333;
+      }
+    
+      &__dark-mode{
+        background-color: #f3e6d4;
+      }
 }
 
 .subs{

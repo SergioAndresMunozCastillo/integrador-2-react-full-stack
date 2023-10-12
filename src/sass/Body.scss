@@ -5,8 +5,16 @@
 /* font-family: 'EB Garamond', serif; */
 .section-cards {
   background-color: #FFF5DB;
-  background-image: url(../../public/img/noise.png);
   padding: 1em;
+
+  &__light-mode{
+    background-image: url(../../public/img/noise.png);
+  }
+
+  &__dark-mode{
+    background-image: url(../../public/img/noise-dark.png);
+    color: #f3e6d4
+  }
 
   &__header {
     display: inline-block;
@@ -40,7 +48,15 @@
 }
 
 .cards-container {
-  background-image: url(../../public/img/noise.png);
+  &__light-mode{
+    background-image: url(../../public/img/noise.png);
+  }
+
+  &__dark-mode{
+    background-image: url(../../public/img/noise-dark.png);
+    color: #f3e6d4
+  }
+  
   margin-left: 15%;
   margin-right: 15%;
   @media (max-width: 1024px) {
@@ -71,13 +87,18 @@
   height: 1200px;
 }
 
-body{
+.rooter{
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: 'Prata', serif;
-  background-image: url(../../public/img/noise.png);
-  color: #333;
+  &__light-mode{
+    background-image: url(../../public/img/noise.png);
+  }
+
+  &__dark-mode{
+    background-image: url(../../public/img/noise-dark.png);
+  }
 }
 
 .contact-section{

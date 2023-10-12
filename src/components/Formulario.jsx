@@ -16,7 +16,7 @@ const formInicial = {
 
 const Formulario = ({ productoAEditar, setProductoAEditar }) => {
     const [form, setForm, handleChange] = useForm(formInicial)
-    const { createProductoContext, actualizarProductoContext } = useContext(ProductoContext)
+    const { crearProductoContext, actualizarProductoContext } = useContext(ProductoContext)
 
     useEffect(() => {
         productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
@@ -26,7 +26,7 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
         e.preventDefault()
         try {
             if (form.id === null){
-                await createProductoContext(form)
+                await crearProductoContext(form)
             } else {
                 await actualizarProductoContext(form)
             }
