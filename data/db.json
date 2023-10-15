@@ -1,17 +1,6 @@
 {
   "productos": [
     {
-      "id": 8,
-      "nombre": "Televisor 8K",
-      "precio": "2222",
-      "stock": "2",
-      "marca": "Sorny",
-      "categoria": "Electro",
-      "detalles": "Nueva tele 8K",
-      "foto": "img/apple-iphone-11-pro-max.jpg",
-      "envio": true
-    },
-    {
       "id": 9,
       "nombre": "Producto X",
       "precio": "2222",
@@ -42,17 +31,6 @@
       "categoria": "dsofisd",
       "detalles": "dsklfoijio9",
       "foto": "dfew",
-      "envio": false
-    },
-    {
-      "id": 12,
-      "nombre": "Infi",
-      "precio": "176",
-      "stock": "doi",
-      "marca": "dsklfj",
-      "categoria": "dsfoij",
-      "detalles": "dsoji",
-      "foto": "oifjoijdsfdsf",
       "envio": false
     }
   ],

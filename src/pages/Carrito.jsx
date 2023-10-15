@@ -1,12 +1,31 @@
 import { useContext } from "react";
 import "../sass/Carrito.scss";
 import CarritoContext from "../contexts/CarritoContext";
+import 'simple-notify/dist/simple-notify.min.css'
+import Notify from 'simple-notify'
 
 const Carrito = () => {
   const { carrito, eliminarCarritoContext, guardarCarritoContext } = useContext(CarritoContext)
 
-  const handleEliminar = (id) => {
-    eliminarCarritoContext(id)
+  const handleEliminar = (producto) => {
+    eliminarCarritoContext(producto.id)
+
+    new Notify({
+      status: 'info',
+      title: `Producto ${producto.nombre} eliminado`,
+      effect: 'fade',
+      speed: 300,
+      customClass: null,
+      customIcon: null,
+      showIcon: true,
+      showCloseButton: true,
+      autoclose: true,
+      autotimeout: 1500,
+      gap: 20,
+      distance: 20,
+      type: 1,
+      position: 'right top'
+    })
   }
 
   const calcularTotal = () => {
@@ -50,7 +69,7 @@ const Carrito = () => {
                   <td>{producto.cantidad}</td>
                   <td>{producto.precio}</td>
                   <td>
-                    <button onClick={() => handleEliminar(producto.id)}>Eliminar</button>
+                      <button onClick={() => handleEliminar(producto)}>Eliminar</button>
                   </td>
                 </tr>
               ))

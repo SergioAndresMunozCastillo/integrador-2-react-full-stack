@@ -1,3 +1,5 @@
+import 'simple-notify/dist/simple-notify.min.css'
+import Notify from 'simple-notify'
 import { useContext } from 'react'
 import '../sass/Card.scss'
 
@@ -8,6 +10,26 @@ const Card = ({ producto, agregarCarritoContext }) => {
   const handleClick = (e) => {
     //console.log(producto)
     agregarCarritoContext(producto)
+
+    console.log(producto)
+    new Notify({
+      status: 'success',
+      title: `Producto ${producto.nombre} agregado`,
+      text: producto.detalles,
+      effect: 'fade',
+      speed: 300,
+      customClass: null,
+      customIcon: null,
+      showIcon: true,
+      showCloseButton: true,
+      autoclose: true,
+      autotimeout: 1500,
+      gap: 20,
+      distance: 20,
+      type: 1,
+      position: 'right top'
+    })
+
     e.preventDefault()
     
   }
