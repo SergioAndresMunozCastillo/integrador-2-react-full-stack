@@ -1,6 +1,9 @@
 /* ------------------------------------- */
 /* HEADER                                */
 /* ------------------------------------- */
+
+@import "font-awesome/fontawesome.scss";
+
 body{
     background-color: #f3e6d4;
     background-image: url(../../public/img/noise.png);
@@ -267,21 +270,15 @@ body{
       flex-basis: auto;
     }
   
-    &__carrito-container::before{
-      display: inline-block;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-  
-      font: var(--fa-font-solid);
-      content: "\f07a";
-      color: white;
-    }
   
     &__carrito-container:hover{
       cursor: pointer;
     }
   }
   
+  svg{
+    fill: #FFF5DB;
+  }
   /* ------------------------------------- */
   /* MENU TOOGLE                           */
   /* ------------------------------------- */

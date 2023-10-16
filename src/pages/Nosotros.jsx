@@ -22,7 +22,7 @@ const Nosotros = () => {
         </p>
       </div>
       <div className="about-section__pic-container">
-        <img src="../public/img/acerca.png" alt="Nosotros.jpg" />
+        <img src="img/acerca.png" alt="Nosotros.jpg" />
       </div>
       <p>Desde dispositivos inteligentes hasta gadgets de vanguardia, nuestra pasión por la electrónica se traduce en una cuidada selección de productos que no solo te sorprenderán, sino que también mejorarán tu vida diaria. Nos enorgullecemos de ofrecer no solo
          productos excepcionales, sino también un servicio al cliente insuperable. Nuestro equipo está dedicado a brindarte orientación experta y asistencia personalizada para garantizar que encuentres exactamente lo que necesitas. Únete a nosotros en nuestro viaje para explorar el futuro digital.</p>

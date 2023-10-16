@@ -3,7 +3,7 @@ import { del, get, post, update } from "../utils/https";
 
 const ProductoContext = createContext();
 
-const url = "http://localhost:8080/productos/";
+const url = "https://652c7cded0d1df5273ef714c.mockapi.io/productos/";
 
 
 const ProductoProvider = ({children}) => {
