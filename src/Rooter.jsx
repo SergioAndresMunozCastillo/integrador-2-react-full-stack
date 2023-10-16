@@ -17,15 +17,15 @@ const Rooter = () => {
   return (
     <div className={`rooter rooter__${mode}-mode`}>
       <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Inicio/>}></Route>
-        <Route path="/alta" element={<Alta/>}></Route>
-        <Route path="/nosotros" element={<Nosotros/>}></Route>
-        <Route path="/contacto" element={<Contacto/>}></Route>
-        <Route path="/carrito" element={<Carrito/>}></Route>
-      </Routes>
-      <Footer/>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Inicio/>}></Route>
+          <Route path="/alta" element={<Alta/>}></Route>
+          <Route path="/nosotros" element={<Nosotros/>}></Route>
+          <Route path="/contacto" element={<Contacto/>}></Route>
+          <Route path="/carrito" element={<Carrito/>}></Route>
+        </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   )
