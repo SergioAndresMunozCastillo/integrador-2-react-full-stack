@@ -11,7 +11,6 @@ const Card = ({ producto, agregarCarritoContext }) => {
     //console.log(producto)
     agregarCarritoContext(producto)
 
-    console.log(producto)
     new Notify({
       status: 'success',
       title: `Producto ${producto.nombre} agregado`,

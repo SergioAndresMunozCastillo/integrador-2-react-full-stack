@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { useForm } from '../hooks/useForm'
 import ProductoContext from '../contexts/ProductoContext'
+import "../sass/Formulario.scss"
 
 const formInicial = {
     id: null, 
@@ -44,43 +45,50 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
     }
     return (
     <>
-        <h3>{ productoAEditar ? 'Editando' : 'Agregando' }</h3>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="lbl-nombre">Nombre</label>
-            <input type="text" name="nombre" id="lbl-nombre" value={form.nombre} onChange={handleChange} />
+        <h2>{ productoAEditar ? 'Editando' : 'Agregando' }</h2>
+        <div className='form-container'>
+          <div className='form-container__text-presentation'>
+            <h3>{ productoAEditar ? 'Edita' : 'Añade' } { productoAEditar ? 'el' : 'un' } producto { productoAEditar ? 'seleccionado' : 'nuevo' }</h3>
+            <p>Con nuestro nuevo administrador de productos, podrás manejar la tienda de una manera mucho más eficiente!</p>
           </div>
-          <div>
-            <label htmlFor="lbl-precio">Precio</label>
-            <input type="text" name="precio" id="lbl-precio" value={form.precio} onChange={handleChange} />
-          </div>
-          <div>
-            <label htmlFor="lbl-stock">Stock</label>
-            <input type="text" name="stock" id="lbl-stock" value={form.stock} onChange={handleChange} />
-          </div>
-          <div>
-            <label htmlFor="lbl-marca">Marca</label>
-            <input type="text" name="marca" id="lbl-marca" value={form.marca} onChange={handleChange} />
-          </div>
-          <div>
-            <label htmlFor="lbl-categoria">Categoría</label>
-            <input type="text" name="categoria" id="lbl-categoria" value={form.categoria} onChange={handleChange} />
-          </div>
-          <div>
-            <label htmlFor="lbl-detalles">Detalles</label>
-            <input type="text" name="detalles" id="lbl-detalles" value={form.detalles} onChange={handleChange} />
-          </div>
-          <div>
-            <label htmlFor="lbl-foto">Foto</label>
-            <input type="text" name="foto" id="lbl-foto" value={form.foto} onChange={handleChange} />
-          </div>
-          <div>
-            <label htmlFor="lbl-envio">Envío</label>
-            <input type="checkbox" name="envio" id="lbl-envio" checked={form.envio} onChange={handleChange} />
-          </div>
-          <button type="submit">Guardar</button>
-          <button type="reset" onClick={handleReset}>Limpiar</button>
-        </form>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <br />
+              <input type="text" placeholder="Nombre" name="nombre" id="lbl-nombre" value={form.nombre} onChange={handleChange} />
+            </div>
+            <div>
+              <br />
+              <input type="text" placeholder="Precio" name="precio" id="lbl-precio" value={form.precio} onChange={handleChange} />
+            </div>
+            <div>
+              <br />
+              <input type="text" placeholder="Stock" name="stock" id="lbl-stock" value={form.stock} onChange={handleChange} />
+            </div>
+            <div>
+              <br />
+              <input type="text" placeholder="Marca" name="marca" id="lbl-marca" value={form.marca} onChange={handleChange} />
+            </div>
+            <div>
+              <br />
+              <input type="text" placeholder="Categoria" name="categoria" id="lbl-categoria" value={form.categoria} onChange={handleChange} />
+            </div>
+            <div>
+              <br />
+              <input type="text" placeholder="Detalles" name="detalles" id="lbl-detalles" value={form.detalles} onChange={handleChange} />
+            </div>
+            <div>
+              <br />
+              <input type="text" placeholder="Foto" name="foto" id="lbl-foto" value={form.foto} onChange={handleChange} />
+            </div>
+            <div>
+              <br />
+              <input type="checkbox" name="envio" id="lbl-envio" checked={form.envio} onChange={handleChange} />
+            </div>
+            <button type="submit">Guardar</button>
+            <button type="reset" onClick={handleReset}>Limpiar</button>
+          </form>
+        </div>
+        
     </>
   )
 }

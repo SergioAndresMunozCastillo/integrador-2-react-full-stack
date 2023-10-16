@@ -105,6 +105,35 @@ body{
       padding: 1em;
       padding-bottom: 12px;
     }
+
+    &__dark-mode-container{
+      background-color: #333;
+      color: #FFF5DB;
+      height: auto;
+    }
+
+    &__dark-mode-container [type="checkbox"]{
+      background-color: #333;
+      color: #FFF5DB;
+      height: auto;
+      margin-left: 12px;
+      margin-right: 12px;
+      margin-top: 5%;
+      width: 25px;
+      height: 25px;
+    }
+
+
+    &__font-container{
+      background-color: #333;
+      color: #FFF5DB;
+
+      &__select{
+        background-color: #333;
+        color: #FFF5DB;
+        height: 100%;
+      }
+    }
   
     &__logo-container {
       order: -1;
@@ -118,6 +147,10 @@ body{
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+
+      &__dark-mode{
+        background-image: url(../../public/img/logoNotAsWhitePNG.png);
+      }
     }
   
     &__form-container {
@@ -126,12 +159,74 @@ body{
       justify-content: space-evenly;
       order: 1;
       background-color: #333;
-      width: 85%;
+      width: 71%;
     }
   
-    @media (max-width: 768px){
+
+    @media (max-width: 1910px){
       &__form-container {
-        width: 80%;
+        width: 69.5%;
+      }
+    }
+
+    @media (max-width: 1810px){
+      &__form-container {
+        width: 67.5%;
+      }
+    }
+
+    @media (max-width: 1608px){
+      &__form-container {
+        width: 67.3%;
+      }
+    }
+    
+    @media (max-width: 1570px){
+      &__form-container {
+        width: 65%;
+      }
+    }
+
+    @media (max-width: 1430px){
+      &__form-container {
+        width: 60%;
+      }
+    }
+
+    @media (max-width: 1175px){
+      &__form-container {
+        width: 55%;
+      }
+    }
+
+    @media (max-width: 1400px){
+      &__form-container {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 890px){
+      &__form-container {
+        width: 43%;
+      }
+    }
+
+    @media (max-width: 770px){
+      &__form-container {
+        width: 35%;
+      }
+    }
+
+    @media (max-width: 730px){
+      &__form-container {
+        width: 20%;
+      }
+      &__dark-mode-container{
+        width: 20%;
+      }
+
+      &__font-container{
+        width: 10%;
       }
     }
   

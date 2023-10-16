@@ -94,7 +94,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Prata', serif;
+  
+  &__font-prata{
+    font-family: 'Prata', serif;
+  }
+
+  &__font-abril{
+    font-family: 'Abril Fatface', cursive;
+  }
+
+  &__font-eb{
+    font-family: 'EB Garamond', serif;
+  }
+
   &__light-mode{
     background-image: url(../../public/img/noise.png);
   }

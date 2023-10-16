@@ -1,0 +1,16 @@
+.form-container{
+    display: flex;
+    flex-direction: row;
+
+    &__text-presentation{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    &__text-presentation p{
+        width: 30%;
+    }
+}
+

@@ -3,11 +3,13 @@ import ProductoContext from '../contexts/ProductoContext'
 import CarritoContext from '../contexts/CarritoContext'
 import Card from '../components/Card'
 import { useContext } from 'react'
+import FontContext from '../contexts/FontContext'
 
 const Inicio = () => {
     const {productos} = useContext(ProductoContext)
     const { carrito, agregarCarritoContext } = useContext(CarritoContext)
     const {mode} = useContext(DarkModeContext)
+    const {font} = useContext(FontContext)
 
   return (
     <main>

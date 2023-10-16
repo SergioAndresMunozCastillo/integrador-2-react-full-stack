@@ -9,13 +9,15 @@ import Footer from "./components/Footer";
 import React, { useContext } from 'react';
 import DarkModeContext from './contexts/DarkModeContext';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import FontContext from "./contexts/FontContext";
 
 const Rooter = () => {
 
   const {mode} = useContext(DarkModeContext)
+  const {font} = useContext(FontContext)
 
   return (
-    <div className={`rooter rooter__${mode}-mode`}>
+    <div className={`rooter rooter__${mode}-mode rooter__font-${font}`}>
       <BrowserRouter>
         <Header />
         <Routes>

@@ -14,15 +14,18 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Rooter from "./Rooter";
+import { FontProvider } from "./contexts/FontContext";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
       <CarritoProvider>
         <ProductoProvider>
           <DarkModeProvider>
-            <Rooter>
-              
-            </Rooter>
+            <FontProvider>
+              <Rooter>
+
+              </Rooter>
+            </FontProvider>
           </DarkModeProvider>
         </ProductoProvider>
       </CarritoProvider>
